@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # 从环境变量获取密钥（安全性更高）
-SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")  # 默认值供本地测试
+SECRET_KEY = os.getenv("SECRET_KEY", "47e767ca69d212b7ffc733072c598eb3")  # 默认值供本地测试
 
 # 初始化SQLite数据库
 def init_db():
@@ -17,7 +17,7 @@ def init_db():
                  (account_id TEXT PRIMARY KEY, username TEXT, password TEXT)''')
     # 插入测试数据
     c.execute("INSERT OR IGNORE INTO accounts VALUES (?, ?, ?)",
-              ("my_account", "user123", "pass123"))
+              ("my_account", "hotojiating", "Hoto-2024"))
     conn.commit()
     conn.close()
 
